@@ -3,6 +3,7 @@ package com.mordreth.app.myhelloapp.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,12 +12,14 @@ import android.widget.EditText;
 
 public class MainActivity extends ActionBarActivity {
     public static final String EXTRA_MESSAGE = "com.mordreth.myhelloapp.MESSAGE";
+    public static final String LOG_TAG = "HelloAndroid_tag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        int x = 2;
+        Log.v(LOG_TAG, "x is " + x);
     }
 
     public void sendMessage(View view) {
